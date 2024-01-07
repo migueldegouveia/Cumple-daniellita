@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Cumpleaños de Miguelito!</title>
+    <style>
+        body {
+            background-image: url('https://images.squarespace-cdn.com/content/v1/58f90fb3bebafb328ca3e008/1611721794022-DBO3M5MMAHWZJ0GHYLA5/IMG_0440.jpeg?format=2500w'); /* Reemplaza 'url_de_la_imagen_de_nutrias.jpg' con la URL de la imagen de nutrias */
+            background-size: cover;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+        }
+
+        button {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <h1>¡Invitación especial para Daniellita!</h1>
+        <p>Querida Daniellita, me hace mucha ilusión invitarte a celebrar mi cumpleaños el dia 20 de enero en mi casa y quisiera que asistieras. Me haría muy feliz verte aqui con nosotros y pasar mi cumpleaños contigo.</p>
+        <p>Entonces, ¿aceptas, fea?</p>
+        <button id="aceptoBtn" onclick="aceptoClick()">Acepto</button>
+        <button id="niUnBrilloBtn" onclick="niUnBrilloClick()">Ni un brillo pelao</button>
+        <p id="mensaje"></p>
+    </div>
+
+    <script>
+        function aceptoClick() {
+            document.getElementById('niUnBrilloBtn').style.display = 'none';
+            document.getElementById('aceptoBtn').style.display = 'none';
+            document.getElementById('mensaje').innerHTML = 'Gracias Daniellita tqm, te espero con ansias.';
+        }
+
+        function niUnBrilloClick() {
+            var niUnBrilloBtn = document.getElementById('niUnBrilloBtn');
+            var mensaje = document.getElementById('mensaje');
+            
+            niUnBrilloBtn.style.transform = 'scale(0.9)';
+            mensaje.innerHTML = 'Ercia di que si y ya vale.';
+
+            setTimeout(function() {
+                niUnBrilloBtn.style.display = 'none';
+                mensaje.innerHTML = 'Ya no te queda de otra, triplefea.';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
